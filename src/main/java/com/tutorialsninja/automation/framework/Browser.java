@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.opera.OperaDriver;
+//import org.openqa.selenium.opera.OperaDriver;
 
 import com.tutorialsninja.automation.base.Base;
 
@@ -34,11 +34,11 @@ public class Browser {
 			log.info("Internet Explorer Browser is Started" + Base.driver.hashCode());
 			return Base.driver;
 
-		case "opera":
+		/*case "opera":
 			WebDriverManager.operadriver().setup();
 			Base.driver = new OperaDriver();
 			log.info("Opera Browser is Started" + Base.driver.hashCode());
-			return Base.driver;
+			return Base.driver;*/
 
 		case "htmlunit":
 			Base.driver = new HtmlUnitDriver();
@@ -66,8 +66,6 @@ public class Browser {
 			log.info("Exception has Occured while taking screenshot");
 			return null;
 		}
-
-		
 
 	}
 }
